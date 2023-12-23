@@ -2,8 +2,8 @@ site_name: MACH2/MACH2-Viz Documentation
 theme: cinder
 nav:
   - Quick Start:
-    - Features: features.md
-    - MACH2 Installation: installation.md
+    - Basic Features: feature.md
+    - Installation: installation.md
     - Opening MACH2-Viz: opening.md
     - Quick Start Guide: quickstart.md
   - Tutorial:

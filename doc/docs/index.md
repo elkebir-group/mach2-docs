@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD036 -->
 <!-- markdownlint-disable MD045 -->
 
 # <img src="assets/favicon.ico" height="50"></img> MACH2 Documentation
@@ -10,3 +11,9 @@
   <img src="assets/clonal.jpeg" alt="First Image" width="45%" />
   <img src="assets/migration.jpeg" alt="Second Image" width="45%" />
 </p>
+
+*Image: Clone tree labeled by MACH2 (left) and inferred migration graph for Ovarian cancer (right) (data from McPherson et. al., 2016)*
+
+## Quick Start
+
+- [Basic Features](feature.md)
