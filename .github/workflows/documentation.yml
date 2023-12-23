@@ -1,0 +1,33 @@
+name: documentation
+
+on:
+  push:
+    branches:
+      - main  
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install mkdocs
+        pip install mkdocs-cinder  # or use your preferred theme
+
+    - name: Build MkDocs
+      run: mkdocs build --config-file doc/mkdocs.yml
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./doc/site  # Adjust the path to the built documentation
