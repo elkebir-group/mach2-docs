@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Features - MACH2/MACH2-Viz Documentation</title>
+    <title>Basic Features - MACH2/MACH2-Viz Documentation</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -70,19 +70,19 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quick Start <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li >
-    <a href="../features.md">Features</a>
+<li class="active">
+    <a href="./">Basic Features</a>
 </li>
 
                         
                             
 <li >
-    <a href="../installation.md">MACH2 Installation</a>
+    <a href="../installation.md">Installation</a>
 </li>
 
                         
@@ -185,7 +185,29 @@
 
 <h1 id="features">Features</h1>
 <h2 id="mach2-features">MACH2 Features</h2>
-<h2 id="mach2-viz-features">MACH2-Viz Features</h2></div>
+<p>MACH2 infers migration histories of metastatic cancers given the clonal phylogeny and the location of extant clones.</p>
+<p>MACH2 takes as <strong>input</strong> the following:</p>
+<ol>
+<li><strong>Input tree file</strong> : Tree file describing the input clone tree.</li>
+<li><strong>Leaf labeling file</strong> : Labeling file describing the leaf labeling of input clone tree.</li>
+</ol>
+<p>And returns <strong>output</strong> in one of the following formats:</p>
+<ol>
+<li><strong>Refined tree file</strong> : Tree file describing the output refined tree. </li>
+<li><strong>Vertex labeling file</strong> : Labeling file describing the vertex labeling of the refined tree. Labels designate the anatomical location of each node.</li>
+<li><strong>Refined tree DOT</strong> : Refined tree with vertex labeling in <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)#:~:text=DOT%20is%20a%20graph%20description,dot%20filename%20extension%20—%20.">DOT</a> format.</li>
+<li><strong>Migration graph file</strong> : Multi-graph file describing the migration graph.</li>
+<li><strong>Migration graph DOT</strong> : Migration graph in DOT format.</li>
+</ol>
+<h2 id="mach2-viz-features">MACH2-Viz Features</h2>
+<p>MACH2-Viz is an interactive visualizer that allows the user to explore migration patters inferred by MACH2. It has the following features.</p>
+<ul>
+<li><strong>Highlight corresponding nodes</strong>: The user can highlight nodes in the clonal tree or migration graph, and nodes in the corresponding structure will highlight as well.</li>
+<li><strong>Compare solutions</strong>: Users can open solutions side by side and compare them.</li>
+<li><strong>Require or omit migrations</strong>: A summary panel can be opened and migration edges can be required or omitted from the list of solutions displayed.</li>
+<li><strong>Examine polytomy refinement</strong>: The input clonal phylogeny can be compared against the refined phylogeny and corresponding nodes can be panned to and comapred.</li>
+<li><strong>Extensibility</strong>: Users can upload their own solutions or make contributions to the home page table of example solutions.</li>
+</ul></div>
         
         
     </div>
