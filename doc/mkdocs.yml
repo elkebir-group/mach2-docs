@@ -1,0 +1,18 @@
+site_name: MACH2/MACH2-Viz Documentation
+theme: cinder
+nav:
+  - Quick Start:
+    - Features: features.md
+    - MACH2 Installation: installation.md
+    - Opening MACH2-Viz: opening.md
+    - Quick Start Guide: quickstart.md
+  - Tutorial:
+    - MACH2/MACH2-Viz Tutorial: tutorial.md
+    - Example Usage: examples.md
+  - Contributing:
+    - Contributing: contributions.md
+    - Asking for Help: ask.md
+    - Uploading Datasets: upload.md
+    - Creating Documentation: doc.md
+extra_css:
+  - css/custom.css

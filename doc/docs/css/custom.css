@@ -1,0 +1,24 @@
+.navbar {
+    background-color: mediumpurple;
+}
+
+/* Change the hover color for navbar links */
+.navbar a:hover {
+    background-color: purple;
+    color: white;
+}
+
+/* Customize the dropdown menu */
+.navbar .dropdown-menu {
+    background-color: purple;
+}
+
+/* Change the color of items in the dropdown menu on hover */
+.navbar .dropdown-menu li a:hover {
+    background-color: darkpurple;
+    color: white;
+}
+
+.dropdown:hover {
+    color: purple;
+}
