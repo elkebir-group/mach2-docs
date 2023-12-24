@@ -4,7 +4,6 @@ nav:
   - Quick Start:
     - Basic Features: feature.md
     - Installation: installation.md
-    - Opening MACH2-Viz: opening.md
     - Quick Start Guide: quickstart.md
   - Tutorial:
     - MACH2/MACH2-Viz Tutorial: tutorial.md
@@ -16,3 +15,5 @@ nav:
     - Creating Documentation: doc.md
 extra_css:
   - css/custom.css
+markdown_extensions:
+  - attr_list
