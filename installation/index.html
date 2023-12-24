@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Basic Features - MACH2/MACH2-Viz Documentation</title>
+    <title>Installation - MACH2/MACH2-Viz Documentation</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -75,14 +75,14 @@
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Basic Features</a>
+<li >
+    <a href="../feature/">Basic Features</a>
 </li>
 
                         
                             
-<li >
-    <a href="../installation/">Installation</a>
+<li class="active">
+    <a href="./">Installation</a>
 </li>
 
                         
@@ -164,13 +164,13 @@
                             <i class="fas fa-search"></i> Search
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../feature/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="next" href="../installation/">
+                    <li class="disabled">
+                        <a rel="next" >
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -184,41 +184,32 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#features">Features</a></li>
-            <li class="second-level"><a href="#mach2-features">MACH2 Features</a></li>
+        <li class="first-level active"><a href="#installation-guide">Installation Guide</a></li>
+            <li class="second-level"><a href="#prerequisites">Prerequisites</a></li>
                 
-            <li class="second-level"><a href="#mach2-viz-features">MACH2-Viz Features</a></li>
+            <li class="second-level"><a href="#installing-mach2">Installing MACH2</a></li>
+                
+            <li class="second-level"><a href="#mach2-viz">MACH2-Viz</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="features">Features</h1>
-<h2 id="mach2-features">MACH2 Features</h2>
-<p>MACH2 infers migration histories of metastatic cancers given the clonal phylogeny and the location of extant clones.</p>
-<p>MACH2 takes as <strong>input</strong> the following:</p>
-<ol>
-<li><strong>Input tree file</strong> : Tree file describing the input clone tree.</li>
-<li><strong>Leaf labeling file</strong> : Labeling file describing the leaf labeling of input clone tree.</li>
-</ol>
-<p>And returns <strong>output</strong> in one of the following formats:</p>
-<ol>
-<li><strong>Refined tree file</strong> : Tree file describing the output refined tree.</li>
-<li><strong>Vertex labeling file</strong> : Labeling file describing the vertex labeling of the refined tree. Labels designate the anatomical location of each node.</li>
-<li><strong>Refined tree DOT</strong> : Refined tree with vertex labeling in <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)#:~:text=DOT%20is%20a%20graph%20description,dot%20filename%20extension%20—%20.">DOT</a> format.</li>
-<li><strong>Migration graph file</strong> : Multi-graph file describing the migration graph.</li>
-<li><strong>Migration graph DOT</strong> : Migration graph in DOT format.</li>
-</ol>
-<h2 id="mach2-viz-features">MACH2-Viz Features</h2>
-<p>MACH2-Viz is an interactive visualizer that allows the user to explore migration patters inferred by MACH2. It has the following features.</p>
+<h1 id="installation-guide">Installation Guide</h1>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li><strong>Highlight corresponding nodes</strong>: The user can highlight nodes in the clonal tree or migration graph, and nodes in the corresponding structure will highlight as well.</li>
-<li><strong>Compare solutions</strong>: Users can open solutions side by side and compare them.</li>
-<li><strong>Require or omit migrations</strong>: A summary panel can be opened and migration edges can be required or omitted from the list of solutions displayed.</li>
-<li><strong>Examine polytomy refinement</strong>: The input clonal phylogeny can be compared against the refined phylogeny and corresponding nodes can be panned to and comapred.</li>
-<li><strong>Extensibility</strong>: Users can upload their own solutions or make contributions to the home page table of example solutions.</li>
-<li><strong>Backwards compatibility</strong>: Solutions from <a href="https://github.com/raphael-group/machina">MACHINA (2018)</a> can also be loaded into the visualizer.</li>
-</ul></div>
+<li><strong>Python</strong> - <code>MACH2</code> requires Python 3.7 or newer.</li>
+<li><strong>ILP solver</strong> - <code>MACH2</code> requires an ILP solver installed to solve <strong>PMH-TR</strong>. Currently <code>MACH2</code> only supports <code>Gurobi optimizer</code>, but we are going to add support for more ILP solvers in the future. <code>MACH2</code> requires a valid Gurobi installation and license key. The location of Gurobi should be present in <code>LD_LIBRARY_PATH</code> (linux) and <code>DYLD_LIBRARY_PATH</code> (macOS) the license key should be saved in the environment variable <code>GRB_LICENSE_KEY</code>.</li>
+</ul>
+<h2 id="installing-mach2">Installing MACH2</h2>
+<p>MACH2 can be installed using the following command:</p>
+<pre><code class="language-bash">pip install mach2 &amp;&amp; pip install mach2[jupyter]
+</code></pre>
+<h2 id="mach2-viz">MACH2-Viz</h2>
+<p>MACH2-Viz can simply be opened with the following <a href="https://elkebir-group.github.io/mach2-viz/#/">link</a>. However, there is a Python package that allows for opening MACH2-Viz in localhost directly from a Python script or Jupyter Notebook.  </p>
+<p>The package will be installed as a dependency when MACH2 is installed, but to install the Python package for MACH2-Viz alone, run:</p>
+<pre><code class="language-bash">pip install mach2-viz
+</code></pre></div>
         
         
     </div>
