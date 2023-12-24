@@ -17,3 +17,4 @@
 ## Quick Start
 
 - [Basic Features](feature.md)
+- [Installation](installation.md)
