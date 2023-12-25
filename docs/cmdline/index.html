@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Home - MACH2/MACH2-Viz Documentation</title>
+    <title>MACH2 Command Line Usage - MACH2/MACH2-Viz Documentation</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="css/base.min.css" rel="stylesheet">
-    <link href="css/cinder.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
 
     
         
         <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
         
     
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="../../css/custom.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
      
 </head>
 
-<body class="homepage" >
+<body>
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -60,7 +60,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href=".">MACH2/MACH2-Viz Documentation</a>
+              <a class="navbar-brand" href="../..">MACH2/MACH2-Viz Documentation</a>
             
         </div>
 
@@ -76,19 +76,19 @@
                         
                             
 <li >
-    <a href="feature/">Basic Features</a>
+    <a href="../../feature/">Basic Features</a>
 </li>
 
                         
                             
 <li >
-    <a href="installation/">Installation</a>
+    <a href="../../installation/">Installation</a>
 </li>
 
                         
                             
 <li >
-    <a href="quickstart/">Quick Start Guide</a>
+    <a href="../../quickstart/">Quick Start Guide</a>
 </li>
 
                         
@@ -103,13 +103,13 @@
                         
                             
 <li >
-    <a href="tutorial/">MACH2/MACH2-Viz Documentation</a>
+    <a href="../../tutorial/">MACH2/MACH2-Viz Documentation</a>
 </li>
 
                         
                             
 <li >
-    <a href="examples.md">Example Usage</a>
+    <a href="../../examples.md">Example Usage</a>
 </li>
 
                         
@@ -124,25 +124,25 @@
                         
                             
 <li >
-    <a href="contributions.md">Contributing</a>
+    <a href="../../contributions.md">Contributing</a>
 </li>
 
                         
                             
 <li >
-    <a href="ask.md">Asking for Help</a>
+    <a href="../../ask.md">Asking for Help</a>
 </li>
 
                         
                             
 <li >
-    <a href="upload.md">Uploading Datasets</a>
+    <a href="../../upload.md">Uploading Datasets</a>
 </li>
 
                         
                             
 <li >
-    <a href="doc.md">Creating Documentation</a>
+    <a href="../../doc.md">Creating Documentation</a>
 </li>
 
                         
@@ -168,33 +168,57 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#mach2-documentation"> MACH2 Documentation</a></li>
-            <li class="second-level"><a href="#quick-start">Quick Start</a></li>
+        <li class="first-level active"><a href="#mach2-command-line-usage">MACH2 Command Line Usage</a></li>
+            <li class="second-level"><a href="#input">Input</a></li>
+                
+            <li class="second-level"><a href="#usage">Usage</a></li>
+                
+            <li class="second-level"><a href="#example">Example</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<!-- markdownlint-disable MD033 -->
-<!-- markdownlint-disable MD036 -->
-<!-- markdownlint-disable MD045 -->
-
-<h1 id="mach2-documentation"><img src="assets/favicon.ico" height="50"></img> MACH2 Documentation</h1>
+<h1 id="mach2-command-line-usage">MACH2 Command Line Usage</h1>
+<p><a href="../../tutorial/">(Back)</a></p>
+<p>Along with the Jupyter Notebook/Python API usage described in the quick start guide, MACH2 can be run in command line in all platforms with Python installed.</p>
+<h2 id="input">Input</h2>
+<p>To run MACH2 in command line, you will need the following files:</p>
 <ul>
-<li><strong>MACH2</strong>: A mathematical framework for inferring migration histories of metastatic cancer from clone phylogeny and the location of extant clones.</li>
-<li><strong>MACH2-Viz</strong>: An interactive visual application for exploring metastasis patterns</li>
+<li><strong>Input tree file</strong>: Tree file describing the input clone tree. This is an edgelist file that follows a tsv format. (<a href="https://github.com/elkebir-group/MACH2/blob/main/data/mcpherson_2016/patient1.tree">Example</a>)</li>
+<li><strong>Leaf labeling file</strong>: Labeling file describing the leaf labeling of input clone tree. It is in the form of a two-column csv where the first column is a node id and the second column is an anatomic labeling. (<a href="https://github.com/elkebir-group/MACH2/blob/main/data/mcpherson_2016/patient1.labeling">Example</a>)</li>
+<li><em>(Optional)</em> <strong>Coloring file</strong>: An integer mapping for anatomical locations. For visualization purposes. (<a href="https://github.com/elkebir-group/MACH2/blob/main/data/mcpherson_2016/coloring.txt">Example</a>)</li>
 </ul>
-<p align="center">
-  <img src="assets/clonal.jpeg" alt="First Image" width="45%" />
-  <img src="assets/migration.jpeg" alt="Second Image" width="45%" />
-</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="language-text">    usage: mach2 [-h] [-p PRIMARY] [-c COLORMAP] [--log] [-o OUTPUT] [-N NSOLUTIONS] [-C] [-t THREADS] [-s] [-S] clone_tree leaf_labeling
 
-<p><em>Image: Clone tree labeled by MACH2 (left) and inferred migration graph for Ovarian cancer (right) (data from McPherson et. al., 2016)</em></p>
-<h2 id="quick-start">Quick Start</h2>
-<ul>
-<li><a href="feature/">Basic Features</a></li>
-<li><a href="installation/">Installation</a></li>
-</ul></div>
+    MACH2
+
+    positional arguments:
+    clone_tree            Input clone tree
+    leaf_labeling         Input leaf labeling
+
+    options:
+    -h, --help            show this help message and exit
+    -p PRIMARY, --primary PRIMARY
+                            Primary anatomical site
+    -c COLORMAP, --colormap COLORMAP
+                            Color map file
+    --log                 Outputs Gurobi logging
+    -o OUTPUT, --output OUTPUT
+                            Output folder
+    -N NSOLUTIONS, --nsolutions NSOLUTIONS
+                            Maximum number of solutions retained
+    -C, --count_solutions
+                            Only prints the number of solutions (default=False)
+    -t THREADS, --threads THREADS
+                            Number of threads
+    -s, --suboptimal      Returns suboptimal solutions without duplicates, may be slow (default=False)
+    -S, --seeding_sites   Minimizes the number of seeding sites too (default=False)
+</code></pre>
+<h2 id="example">Example</h2>
+<pre><code class="language-bash">mach2 data/mcpherson_2016/patient1.tree data/mcpherson_2016/patient1.labeling -c data/mcpherson_2016/coloring.txt
+</code></pre></div>
         
         
     </div>
@@ -214,7 +238,7 @@
       </footer>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -222,10 +246,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = "."</script>
+    <script>var base_url = "../.."</script>
     
-    <script src="js/base.js"></script>
-    <script src="search/main.js"></script>
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -296,8 +320,3 @@
     </body>
 
 </html>
-
-<!--
-MkDocs version : 1.5.3
-Build Date UTC : 2023-12-25 01:06:27.311575+00:00
--->
