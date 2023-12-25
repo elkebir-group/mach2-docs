@@ -16,7 +16,7 @@
     
     
       
-        <title>MACH2 Command Line Usage - MACH2/MACH2-Viz Documentation</title>
+        <title>Input Files - MACH2/MACH2-Viz Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mach2-command-line-usage" class="md-skip">
+        <a href="#input-files" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MACH2 Command Line Usage
+              Input Files
             
           </span>
         </div>
@@ -530,27 +530,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#tree-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Input
+      Tree File
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#labeling-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Labeling File
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#coloring-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Coloring File
     </span>
   </a>
   
@@ -571,46 +571,37 @@
                   
 
 
-<h1 id="mach2-command-line-usage">MACH2 Command Line Usage</h1>
+<h1 id="input-files">Input Files</h1>
 <p><a href="../../tutorial/">(Back)</a></p>
-<p>Along with the Jupyter Notebook/Python API usage described in the quick start guide, MACH2 can be run in command line in all platforms with Python installed.</p>
-<h2 id="input">Input</h2>
-<p>To run MACH2 in command line, you will need the following files:</p>
-<ul>
-<li><strong>Input tree file</strong>: Tree file describing the input clone tree. This is an edgelist file that follows a tsv format. (<a href="https://github.com/elkebir-group/MACH2/blob/main/data/mcpherson_2016/patient1.tree">Example</a>)</li>
-<li><strong>Leaf labeling file</strong>: Labeling file describing the leaf labeling of input clone tree. It is in the form of a two-column csv where the first column is a node id and the second column is an anatomic labeling. (<a href="https://github.com/elkebir-group/MACH2/blob/main/data/mcpherson_2016/patient1.labeling">Example</a>)</li>
-<li><em>(Optional)</em> <strong>Coloring file</strong>: An integer mapping for anatomical locations. For visualization purposes. (<a href="https://github.com/elkebir-group/MACH2/blob/main/data/mcpherson_2016/coloring.txt">Example</a>)</li>
-</ul>
-<h2 id="usage">Usage</h2>
-<pre><code class="language-text">    usage: mach2 [-h] [-p PRIMARY] [-c COLORMAP] [--log] [-o OUTPUT] [-N NSOLUTIONS] [-C] [-t THREADS] [-s] [-S] clone_tree leaf_labeling
-
-    MACH2
-
-    positional arguments:
-    clone_tree            Input clone tree
-    leaf_labeling         Input leaf labeling
-
-    options:
-    -h, --help            show this help message and exit
-    -p PRIMARY, --primary PRIMARY
-                            Primary anatomical site
-    -c COLORMAP, --colormap COLORMAP
-                            Color map file
-    --log                 Outputs Gurobi logging
-    -o OUTPUT, --output OUTPUT
-                            Output folder
-    -N NSOLUTIONS, --nsolutions NSOLUTIONS
-                            Maximum number of solutions retained
-    -C, --count_solutions
-                            Only prints the number of solutions (default=False)
-    -t THREADS, --threads THREADS
-                            Number of threads
-    -s, --suboptimal      Returns suboptimal solutions without duplicates, may be slow (default=False)
-    -S, --seeding_sites   Minimizes the number of seeding sites too (default=False)
+<h2 id="tree-file">Tree File</h2>
+<p>MACH2 requires a file describing the input clonal phylogeny. This is in the form of an edgelist describing a tree (this means that there must not be multiple components or cycles in the edgelist). This is in a tsv formatted file with two columns. Entries are separated by spaces. See the example below:</p>
+<pre><code class="language-text">A A1
+A A2
+A A3
+A A4
+A A5
+A A6
+B B1
+B B2
+B B3
+B B4
+B B5
+D D1
+F F1
+H H1
+H H2
+A B
+A D
+B C1
+D F
+D E1
+F H
+F G1
+H I1
 </code></pre>
-<h2 id="example">Example</h2>
-<pre><code class="language-bash">mach2 data/mcpherson_2016/patient1.tree data/mcpherson_2016/patient1.labeling -c data/mcpherson_2016/coloring.txt
-</code></pre>
+<p><em>(McPherson 2016)</em></p>
+<h2 id="labeling-file">Labeling File</h2>
+<h2 id="coloring-file">Coloring File</h2>
 
 
 
