@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD036 -->
+
 # Input Files
 
 [(Back)](../tutorial.md)
@@ -31,6 +33,7 @@ F H
 F G1
 H I1
 ```
+
 *(McPherson 2016)*
 
 ## Labeling File

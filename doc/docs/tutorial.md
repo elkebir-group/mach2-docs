@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD007 -->
+
 # Documentation
 
 To get started, see the [quick start tutorial](quickstart.md). Then, view the documentation below.

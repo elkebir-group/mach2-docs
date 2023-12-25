@@ -2,6 +2,7 @@ site_name: MACH2/MACH2-Viz Documentation
 theme: material
 theme: 
   name: material
+  logo: assets/favicon.ico
   features:
     - content.tooltips
     - content.code.copy
@@ -15,7 +16,6 @@ nav:
     - Example Usage: examples.md
   - Contributing:
     - Contributing: contributions.md
-    - Asking for Help: ask.md
     - Uploading Datasets: upload.md
     - Creating Documentation: doc.md
 extra_css:

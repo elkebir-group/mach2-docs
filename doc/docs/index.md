@@ -18,3 +18,9 @@
 
 - [Basic Features](feature.md)
 - [Installation](installation.md)
+- [Quick Start Guide](quickstart.md)
+
+## Tutorial
+
+- [Documentation](tutorial.md)
+- [Examples](examples.md)
