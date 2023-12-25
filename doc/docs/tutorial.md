@@ -4,7 +4,7 @@ To get started, see the [quick start tutorial](quickstart.md). Then, view the do
 
 ## MACH2 Documentation
 
-- Input Files
+- [Input Files](docs/inputs.md)
 - [Command Line Usage](docs/cmdline.md)
 - Python Usage
 - API

@@ -1,5 +1,10 @@
 site_name: MACH2/MACH2-Viz Documentation
-theme: cinder
+theme: material
+theme: 
+  name: material
+  features:
+    - content.tooltips
+    - content.code.copy
 nav:
   - Quick Start:
     - Basic Features: feature.md
