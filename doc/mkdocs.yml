@@ -6,7 +6,7 @@ nav:
     - Installation: installation.md
     - Quick Start Guide: quickstart.md
   - Tutorial:
-    - MACH2/MACH2-Viz Tutorial: tutorial.md
+    - MACH2/MACH2-Viz Documentation: tutorial.md
     - Example Usage: examples.md
   - Contributing:
     - Contributing: contributions.md
