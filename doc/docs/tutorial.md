@@ -8,13 +8,12 @@ To get started, see the [quick start tutorial](quickstart.md). Then, view the do
 
 - [Input Files](docs/inputs.md)
 - [Command Line Usage](docs/cmdline.md)
-- [Python Usage](docs/python_mach2.md)
-- API
-    - MACH
-    - MigrationGraph
-    - Phylogeny
-    - RefinedPhylogeny
-    - SolutionSet
+- [Python API Usage](docs/python_mach2.md)
+    - [MACH](docs/api/mach.md)
+    - [MigrationGraph](docs/api/migrationgraph.md)
+    - [Phylogeny](docs/api/phylogeny.md)
+    - [RefinedPhylogeny](docs/api/refinedphylogeny.md)
+    - [SolutionSet](docs/api/solutionset.md)
 
 ## MACH2-Viz Documentation
 

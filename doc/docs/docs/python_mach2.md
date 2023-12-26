@@ -68,3 +68,13 @@ solutions.open_in_viz()
 1. Export the solution to JSON file
 2. Open the homepage of MACH2-Viz [(link)](elkebir-group.github.io/mach2-viz/)
 3. Click the `+` icon at the bottom right and upload your file.
+
+## Python API
+
+These methods are a part of the Python API. Please see the following objects for more information on the API:
+
+- [MACH](api/mach.md)
+- [MigrationGraph](api/migrationgraph.md)
+- [Phylogeny](api/phylogeny.md)
+- [RefinedPhylogeny](api/refinedphylogeny.md)
+- [SolutionSet](api/solutionset.md)
