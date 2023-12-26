@@ -8,7 +8,7 @@ To get started, see the [quick start tutorial](quickstart.md). Then, view the do
 
 - [Input Files](docs/inputs.md)
 - [Command Line Usage](docs/cmdline.md)
-- Python Usage
+- [Python Usage](docs/python_mach2.md)
 - API
     - MACH
     - MigrationGraph

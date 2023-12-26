@@ -1,11 +1,11 @@
 site_name: MACH2/MACH2-Viz Documentation
-theme: material
 theme: 
   name: material
   logo: assets/favicon.ico
   features:
     - content.tooltips
     - content.code.copy
+    - content.code.annotate
 nav:
   - Quick Start:
     - Basic Features: feature.md
@@ -28,3 +28,10 @@ extra_css:
   - css/custom.css
 markdown_extensions:
   - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
