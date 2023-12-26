@@ -78,3 +78,4 @@ These methods are a part of the Python API. Please see the following objects for
 - [Phylogeny](api/phylogeny.md)
 - [RefinedPhylogeny](api/refinedphylogeny.md)
 - [SolutionSet](api/solutionset.md)
+- [Solution](docs/api/solution.md)

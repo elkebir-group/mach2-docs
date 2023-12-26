@@ -14,6 +14,7 @@ To get started, see the [quick start tutorial](quickstart.md). Then, view the do
     - [Phylogeny](docs/api/phylogeny.md)
     - [RefinedPhylogeny](docs/api/refinedphylogeny.md)
     - [SolutionSet](docs/api/solutionset.md)
+    - [Solution](docs/api/solution.md)
 
 ## MACH2-Viz Documentation
 
