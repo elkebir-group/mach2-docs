@@ -717,44 +717,44 @@
 <h2 id="visualizing-the-tree">Visualizing the Tree</h2>
 <p>We visualize the tree through the following lines of Python code:</p>
 <p><code>In[1]:</code></p>
-<pre><code class="language-python">import mach2
-tree = mach2.Phylogeny.from_file('patient1.tree', 'patient1.labeling')
-tree
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">mach2</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">tree</span> <span class="o">=</span> <span class="n">mach2</span><span class="o">.</span><span class="n">Phylogeny</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s1">&#39;patient1.tree&#39;</span><span class="p">,</span> <span class="s1">&#39;patient1.labeling&#39;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">tree</span>
+</span></code></pre></div>
 <p><code>Out[1]</code>:</p>
 <p><img alt="input" src="../assets/input.jpeg" /></p>
 <h2 id="computing-a-full-labeling">Computing a Full Labeling</h2>
 <p><strong>NOTE:</strong> Computing a full labeling using MACH2 requires an ILP solver such as Gurobi, make sure to have it installed.</p>
 <p>To solve the PMH-TR (Parsimonious Migration History with Tree Resolution) problem, you can run the following code:</p>
 <p><code>In[2]</code>:</p>
-<pre><code class="language-python">solver = mach2.MACH(tree, primary_site='LOv')
-solutions = solver.solve('gurobi', 30, n_threads=30)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">solver</span> <span class="o">=</span> <span class="n">mach2</span><span class="o">.</span><span class="n">MACH</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">primary_site</span><span class="o">=</span><span class="s1">&#39;LOv&#39;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">solutions</span> <span class="o">=</span> <span class="n">solver</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="s1">&#39;gurobi&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">n_threads</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</span></code></pre></div>
 <p><code>Out[2]</code>:</p>
-<pre><code class="language-text">Set parameter MIPGap to value 0
-Set parameter PoolSolutions to value 30
-Set parameter PoolSearchMode to value 2
-Set parameter Threads to value 30
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Set parameter MIPGap to value 0
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Set parameter PoolSolutions to value 30
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Set parameter PoolSearchMode to value 2
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Set parameter Threads to value 30
+</span></code></pre></div>
 <h2 id="visualizing-solutions">Visualizing Solutions</h2>
 <p>You can visualize solutions using class methods in MACH2's library. Let's visualize the first solution returned by MACH2:</p>
 <h3 id="visualizing-the-clone-tree">Visualizing the Clone Tree</h3>
 <p><code>In[3]</code></p>
-<pre><code class="language-python">solutions[0].phylogeny
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">solutions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">phylogeny</span>
+</span></code></pre></div>
 <p><code>Out[3]</code></p>
 <p><img alt="cl0" src="../assets/clonal0.jpeg" /></p>
 <h3 id="visualizing-the-migration-graph">Visualizing the Migration Graph</h3>
 <p><code>In[4]</code></p>
-<pre><code class="language-python">solutions[0].migration_graph
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">solutions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">migration_graph</span>
+</span></code></pre></div>
 <p><code>Out[4]</code></p>
 <p><img alt="mig0" src="../assets/migration0.jpeg" style="height:350px" /></p>
 <h3 id="opening-mach2-viz">Opening MACH2-Viz</h3>
 <p>MACH2-Viz can be opened directly from the Jupyter Notebook via localhost through the following code</p>
 <p><code>In[5]</code></p>
-<pre><code class="language-python">solutions.open_in_viz()
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">solutions</span><span class="o">.</span><span class="n">open_in_viz</span><span class="p">()</span>
+</span></code></pre></div>
 <p>A browser window should open and display an interactive visualization of the solution space.</p>
 
 
@@ -828,7 +828,7 @@ Set parameter Threads to value 30
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.tooltips", "content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tooltips", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
