@@ -18,6 +18,12 @@ nav:
     - Contributing: contributions.md
     - Uploading Datasets: upload.md
     - Creating Documentation: doc.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/elkebir-group/MACH2/tree/main
+    - icon: fontawesome/solid/globe
+      link: https://elkebir-group.github.io/mach2-viz/
 extra_css:
   - css/custom.css
 markdown_extensions:
