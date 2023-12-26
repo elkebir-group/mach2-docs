@@ -18,9 +18,9 @@ To get started, see the [quick start tutorial](quickstart.md). Then, view the do
 
 ## MACH2-Viz Documentation
 
-- Getting Started
-- Data Preparation
-- Navigating the Visualizer
+- [Getting Started](docs/mach2viz_start.md)
+- [Data Preparation](docs/data_preparation.md)
+- [Navigating the Visualizer](docs/navigating_viz.md)
 - Comparing Solutions
 - Examining Polytomy
 - Summary View
