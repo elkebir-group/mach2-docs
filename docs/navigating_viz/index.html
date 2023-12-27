@@ -16,7 +16,7 @@
     
     
       
-        <title>Navigating viz - MACH2/MACH2-Viz Documentation</title>
+        <title>Navigating the Visualizer - MACH2/MACH2-Viz Documentation</title>
       
     
     
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#navigating-the-visualizer" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -90,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Navigating viz
+              Navigating the Visualizer
             
           </span>
         </div>
@@ -492,6 +497,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-dependent-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data-Dependent Functions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -506,9 +539,36 @@
                   
 
 
-  <h1>Navigating viz</h1>
-
-
+<h1 id="navigating-the-visualizer">Navigating the Visualizer</h1>
+<p>When you first open the visualizer, you will see a layout that looks like the following:</p>
+<p><img alt="viz" src="../../assets/first-viz.jpeg" />
+<em>The basic viz view of MACH2-Viz. Both a clone tree and its corresponding migration graph will display. View more functionality below.</em></p>
+<h2 id="basic-functions">Basic Functions</h2>
+<ul>
+<li><strong>View migration and comigration numbers</strong>. In the top left corner of the migration graph panel, you will see the calculated migration and comigration numbers:</li>
+<li><span class="arithmatex">\(\mu\)</span>: The migration number, the total number of migration events.</li>
+<li><span class="arithmatex">\(\gamma\)</span>: The number of unique migrations, where uniqueness is given by the anatomical locations at which the migration is happening.</li>
+<li><strong>Toggle the solutions</strong> with the dropdown menu in the top left.</li>
+<li><strong>Zoom, pan, and drag nodes</strong> in both the tree and migration graph.</li>
+<li><strong>Hover corresponding nodes and edges</strong>. When you hover over a node or edge in the migration graph, the corresponding edges in the clonal tree will highlight as well. Likewise vice versa.</li>
+<li>If a node in the migration graph is hovered, all mutations within the hovered location will highlight.</li>
+<li>If an edge in the migration graph is hovered, all edes between tumor locations will highlight in the clone tree.</li>
+<li>The same correspondence exists vice versa if a clone tree edge or node is highlighted.</li>
+<li><strong>Compare solutions</strong> by opening up another visualizer window. This can be done by clicking the <code>+</code> bar on the right.</li>
+<li><strong>View the summary panel</strong>. To view a summary graph of all solutions, click the <code>+</code> bar on the left.</li>
+<li>Though self-explanatory, you can rotate the migration graph, and reset the view if any changes were made on the view (panning, dragging, or dilation). <strong>For more information, press the <code>/</code> key for a help popup</strong>.</li>
+</ul>
+<p><img alt="hover-viz" src="../../assets/hover-viz.jpeg" />
+<em>Hover function in the viz. My mouse is hovering over the <code>p.lung</code> node in the migration graph.</em></p>
+<h2 id="data-dependent-functions">Data-Dependent Functions</h2>
+<ul>
+<li><strong>If you have an input tree in your data</strong></li>
+<li>There will be an <code>input tree</code> button like in the example above. This will let you toggle between the input tree and the solution tree.</li>
+<li><strong>If you have multiple input trees</strong></li>
+<li>You will also be able to select between input trees in the dropdown menu in the top of the window, just like you can in selection between solutions. See the example below.</li>
+</ul>
+<p><img alt="multi-input" src="../../assets/multi-input.jpeg" style="height:250px" /></p>
+<p><em>A viz panel for a dataset with multiple input trees. There is a dropdown for input trees on the top  left, and the unlabeled input tree is displayed on the bottom panel.</em></p>
 
 
 
@@ -585,6 +645,12 @@
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
