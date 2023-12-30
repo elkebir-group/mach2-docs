@@ -21,6 +21,6 @@ To get started, see the [quick start tutorial](quickstart.md). Then, view the do
 - [Getting Started](docs/mach2viz_start.md)
 - [Data Preparation](docs/data_preparation.md)
 - [Navigating the Visualizer](docs/navigating_viz.md)
-- Comparing Solutions
+- [Comparing Solutions](docs/comparison.md)
 - Examining Polytomy
 - Summary View
