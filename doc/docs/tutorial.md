@@ -22,5 +22,4 @@ To get started, see the [quick start tutorial](quickstart.md). Then, view the do
 - [Data Preparation](docs/data_preparation.md)
 - [Navigating the Visualizer](docs/navigating_viz.md)
 - [Comparing Solutions](docs/comparison.md)
-- Examining Polytomy
-- Summary View
+- [Summary View](docs/summary.md)
