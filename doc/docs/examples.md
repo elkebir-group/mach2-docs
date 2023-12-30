@@ -1,7 +1,5 @@
 # Example Usage
 
-[(back)](tutorial.md)
-
 ## MACH2
 
 ### Python API
