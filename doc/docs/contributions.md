@@ -4,7 +4,7 @@
 
 We welcome all helpful contributions to improving MACH2 and MACH2-Viz. Contributors can help in the following ways:
 
-- Adding your dataset visualizations to the MACH2-Viz homepage
+- Adding your dataset visualizations to the MACH2-Viz homepage. To learn how to include your dataset in the homepage, see [here](upload.md).
 - Identifying and/or fixing bugs and typos
 - Writing tutorials and/or blog posts
 - Proposing/developing new features
