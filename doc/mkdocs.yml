@@ -17,7 +17,6 @@ nav:
   - Contributing:
     - Contributing: contributions.md
     - Uploading Datasets: upload.md
-    - Creating Documentation: doc.md
 extra:
   social:
     - icon: fontawesome/brands/github
