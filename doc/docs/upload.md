@@ -26,6 +26,14 @@ First, to learn how to generate a JSON dataset to upload to MACH2-Viz, see the f
 2. Likewise, this can be renamed to the name of your study.
 3. This path is relative to `src/samples/`
 
-## III. Make a Pull Request
+## III. Open MACH2-Viz Locally
 
-Once you are done modifying the repository, submit a [pull request](https://github.com/elkebir-group/mach2-viz/pulls)
+From the root of MACH2-Viz, simply run the following command:
+
+```bash
+npm install && npm start
+```
+
+<!-- ## III. Make a Pull Request
+
+Once you are done modifying the repository, submit a [pull request](https://github.com/elkebir-group/mach2-viz/pulls) -->

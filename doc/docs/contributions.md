@@ -18,10 +18,10 @@ We welcome all helpful contributions to improving MACH2 and MACH2-Viz. Contribut
 
 ## Community Guidelines
 
-### Developer Guidelines
+<!-- ### Developer Guidelines
 
 - Please make contributions on a forked repository and we will approve pull requests
-- Make sure all code follows Python, JavaScript, and HTML style guidelines.
+- Make sure all code follows Python, JavaScript, and HTML style guidelines. -->
 
 ### Using Appropriate Language
 
